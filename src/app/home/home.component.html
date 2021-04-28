@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<section class="home-page">
+  <h1 class="home-title">Hello Quiz !</h1>
+  <p>let' check your Knowledge</p>
+  <form class="select-forms" >
+    <div class="select-category">
+      <label for="category">Select Category</label>
+      <select [(ngModel)]="categorySelect" #Category id="category" name="category-select">
+        <option value="21">Sports</option>
+        <option value="23" >History</option>
+        <option value="24">Politics</option>
+        <option value="25">Art</option>
+        <option value="27">Animals</option>
+      </select>
+    </div>
+    <div class="select-category">
+      <label for="difficulty">Select Difficulty</label>
+      <select [(ngModel)]="difficultySelect" #Difficulty id="difficulty" name="difficulty-select">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+  </form>
+  <button class="btn btn-success" type="submit" (click)="onBtnSubmit(Category.value, Difficulty.value)"  [disabled]="categorySelect === '' || difficultySelect === ''">Get Started</button>
+</section>
+<!--<div class="container container-home">-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-10 col-md-7 ">-->
+<!--      <div class="input-group mb-3">-->
+<!--        <div class="input-group-prepend">-->
+<!--          <h5 class="select-label">Select Category</h5>-->
+<!--        </div>-->
+<!--        <select class="custom-select" id="category" aria-label="Example select with button addon">-->
+<!--          <option selected>Any Category</option>-->
+<!--          <option value="1">History</option>-->
+<!--          <option value="2">Sports</option>-->
+<!--          <option value="3">Art</option>-->
+<!--          <option value="4">Animals</option>-->
+<!--          <option value="5">Politics</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--      <div class="input-group mb-3">-->
+<!--        <div class="input-group-prepend">-->
+<!--          <h5 class="select-label">Select Difficulty</h5>-->
+<!--        </div>-->
+<!--        <select class="custom-select" id="difficulty" aria-label="Example select with button addon">-->
+<!--          <option selected>Any Difficulty</option>-->
+<!--          <option value="1">Easy</option>-->
+<!--          <option value="2">Medium</option>-->
+<!--          <option value="3">Hard</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
